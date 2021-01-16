@@ -143,6 +143,7 @@ $(document).ready(function() {
         }, 1000);
     }
 
+    // Changes timer bar graphic based on timer
     function updateTimerBar() {
         var timerBarProgress = (timer/countDownTimer) * 100;
         timerBar.setAttribute("style", "width:" + timerBarProgress + "%;");
@@ -229,6 +230,7 @@ $(document).ready(function() {
         localStorage.setItem("userScores", JSON.stringify(userScores));
     }
 
+    // Changes screen to score screen 
     function viewScores() {
         $("#startScreen").hide();
         $("#gameScreen").hide();
@@ -238,9 +240,5 @@ $(document).ready(function() {
         $("#scoreScreen").show();
         $(headerTitle).text("Past Scores");
         $(subTitle).text("Refresh to play again!");
-        // $(subText).text("Aim for a higher score!")
-        //     .removeClass("incorrect","correct");
     }
 }); //End of Script
-
-// Add moving timer graphic in the title bar. Title bar is timer.
