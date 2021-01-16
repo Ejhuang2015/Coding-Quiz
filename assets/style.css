@@ -1,0 +1,119 @@
+/* Entire Page- Used for full page Background */
+html {
+    background: rgb(127,177,186) url(./Images/Underwater\ BG.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color:honeydew;
+    background: transparent;
+    max-width: 100%;
+}
+
+/* Common Display Styles */
+.clear {
+    display: none;
+}
+
+.screen {
+    height: 600px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Top Banner Display */
+.topPanel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60px;
+    background-color: rgb(69, 86, 87, 0.5);
+}
+
+.timerBar {
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(pink, red, pink);
+    border-radius: 5px;
+    margin: auto;
+}
+
+h1.headerTitle {
+    position: absolute;
+    margin: auto;
+    z-index: 10;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+/* Footer Display */
+.scoreButton,
+.clearButton {
+    border-radius: 10px;
+}
+
+/* Start Game Button Page */
+#startScreen {
+    padding: 50px;
+}
+
+.startButtonStyle {
+    padding: 10px;
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 300px;
+    height: 100px;
+}
+
+/* Main Game Screen Page */
+h2.subTitle {
+    color: rgb(0, 0, 0);
+    padding: 50px;
+}
+
+h3.subText {
+    padding: 50px;
+}
+
+h3.correct {
+    color: rgb(88, 245, 114);
+}
+
+h3.incorrect {
+    color: rgb(245, 88, 88);
+}
+
+.card {
+    height: 200px;
+    background-color: rgb(32, 178, 170, 0.9);
+    border: solid 3px seagreen;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+h3.answer {
+    font-size: 40px;
+    margin: auto;
+}
+
+/* High Score Screen Page */
+div.scoreList {
+    font-size: 30px;
+    color:black;
+}
+
+p.newestScore {
+    font-size: 50px;
+    color: red;
+}
