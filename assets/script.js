@@ -13,7 +13,7 @@ $(document).ready(function() {
     const ansThree = document.querySelector(".ansThree");
     const ansFour = document.querySelector(".ansFour");
 
-    var countDownTimer = 6;
+    var countDownTimer = 60;
     var timer = countDownTimer;
     var finished = false;
     var userScores = [];
