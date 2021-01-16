@@ -23,7 +23,7 @@ body {
 }
 
 .screen {
-    height: 600px;
+    height: 500px;
 }
 
 .center {
@@ -57,6 +57,8 @@ h1.headerTitle {
 /* Footer Display */
 .scoreButton,
 .clearButton {
+    background-color: rgb(24, 65, 128);
+    color: white;
     border-radius: 10px;
 }
 
@@ -73,30 +75,31 @@ h1.headerTitle {
     border-radius: 10px;
     width: 300px;
     height: 100px;
+    background-color:rgb(32, 178, 170, 0.9);
 }
 
 /* Main Game Screen Page */
 h2.subTitle {
     color: rgb(0, 0, 0);
-    padding: 50px;
+    padding: 25px;
 }
 
 h3.subText {
-    padding: 50px;
+    color:rgb(24, 65, 128);
 }
 
 h3.correct {
-    color: rgb(88, 245, 114);
+    color: rgb(10, 94, 24);
 }
 
 h3.incorrect {
-    color: rgb(245, 88, 88);
+    color: rgb(99, 17, 17);
 }
 
 .card {
     height: 200px;
     background-color: rgb(32, 178, 170, 0.9);
-    border: solid 3px seagreen;
+    border: solid 3px rgb(27, 236, 226);
     border-radius: 10px;
     margin: 20px auto;
     width: 90%;
@@ -113,7 +116,8 @@ div.scoreList {
     color:black;
 }
 
-p.newestScore {
-    font-size: 50px;
-    color: red;
+h3.newestScore {
+    font-size: 75px;
+    font-weight: bold;
+    color: rgb(0, 47, 255);
 }

@@ -103,6 +103,7 @@ $(document).ready(function() {
 
     $(clearButton).on("click", function(){
         localStorage.clear();
+        $(subText).text("");
         document.querySelector(".scoreList").innerHTML = "";
     });
 
@@ -126,12 +127,12 @@ $(document).ready(function() {
             }
             
             if (timer > 1) {
-                $(headerTitle).text(timer + " seconds remaining");
                 timer--;
+                $(headerTitle).text(timer + " seconds remaining");
             }
             else if (timer === 1) {
-                $(headerTitle).text(timer + " second remaining");
                 timer--;
+                $(headerTitle).text(timer + " second remaining");
             } 
             else {
                 clearInterval(timeInterval);
@@ -143,7 +144,6 @@ $(document).ready(function() {
     }
 
     function updateTimerBar() {
-        console.log("Called>");
         var timerBarProgress = (timer/countDownTimer) * 100;
         timerBar.setAttribute("style", "width:" + timerBarProgress + "%;");
     }
@@ -177,8 +177,13 @@ $(document).ready(function() {
     // Check if user entry is 4 characters or less
     function checkUserLength() {
         var userNameCheck = document.getElementById("userInitials").value.trim();
-        if (userNameCheck.length > 4 || userNameCheck.length <= 0){
+        if (userNameCheck.length > 4){
             $(subText).text("Please enter only 4 characters or less!")
+                .addClass("incorrect")
+                .removeClass("correct");
+        }
+        else if (userNameCheck.length <= 0){
+            $(subText).text("Please enter something!")
                 .addClass("incorrect")
                 .removeClass("correct");
         }
@@ -212,11 +217,12 @@ $(document).ready(function() {
         userScores.unshift(userAndScore);
         userScores.forEach((item, index) => {
             if (index === 0) {
-                console.log("Running?");
-                $(".scoreList").append("<p class='scoreListItem newestScore'>" + item.user + ": " + item.score + "</p>")
+                $(subText).text(item.user + ": " + item.score)
+                    .removeClass("incorrect","correct")
+                    .addClass("newestScore");
+                // $(".scoreList").append("<p class='scoreListItem newestScore'>" + item.user + ": " + item.score + "</p>")
             }
             else {
-                console.log("howmany>");
                 $(".scoreList").append("<p class='scoreListItem'>" + item.user + ": " + item.score + "</p>")
             }
         });
@@ -232,8 +238,8 @@ $(document).ready(function() {
         $("#scoreScreen").show();
         $(headerTitle).text("Past Scores");
         $(subTitle).text("Refresh to play again!");
-        $(subText).text("Aim for a higher score!")
-            .removeClass("incorrect","correct");
+        // $(subText).text("Aim for a higher score!")
+        //     .removeClass("incorrect","correct");
     }
 }); //End of Script
 
