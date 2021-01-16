@@ -171,6 +171,7 @@ $(document).ready(function() {
         $(headerTitle).text("Game Over");
         $(subTitle).text("Your score is: " + timer);
         $(subText).text("");
+        timerBar.setAttribute("style", "width:100%; background-image: linear-gradient(lightblue, blue, lightblue);");
     }
 
     // Check if user entry is 4 characters or less
@@ -196,7 +197,7 @@ $(document).ready(function() {
         }
         else{
             storedUserScore.forEach((item) =>{
-                userScores.unshift(item);
+                userScores.push(item);
             });
         }
     }
