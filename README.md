@@ -2,7 +2,7 @@
 
 This project is a practice on using Javascript. It presents a timed quiz about basic coding theory and terminology where wrong answers reduce the time. It also features a high score list and the ability to save the user's initials. Link to the deploted project here: [https://ejhuang2015.github.io/Coding-Quiz/](https://ejhuang2015.github.io/Coding-Quiz/)
 
-![Project example image](./assets/images/CodingQuizScreenshot.png)
+![Project example image](./assets/Images/CodingQuizScreenshot.PNG)
 
 ## Prerequisites
 
